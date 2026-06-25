@@ -1,0 +1,32 @@
+{
+  "name": "automation-store",
+  "version": "1.0.0",
+  "description": "An app designed for practicing automation testing",
+  "homepage": "https://github.com/adricodqa/automation-store#readme",
+  "bugs": {
+    "url": "https://github.com/adricodqa/automation-store/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adricodqa/automation-store.git"
+  },
+  "license": "ISC",
+  "author": "adricodqa",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "dev": "ts-node-dev --project tsconfig.json --respawn --transpile-only src/index.ts"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.8",
+    "express": "^5.2.1",
+    "sqlite3": "^6.0.1"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^26.0.1",
+    "@types/sqlite3": "^3.1.11",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^6.0.3"
+  }
+}
