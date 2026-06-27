@@ -23,8 +23,8 @@ class HeaderComponent extends HTMLElement {
             </h2>
 
             <div>
-              <a href="/login" class="btn btn-dark btn-sm border border-secondary me-2">Login</a>
-              <a href="/register" class="btn btn-secondary btn-sm">Register</a>
+              <a href="/signin" class="btn btn-dark btn-sm border border-secondary me-2">Sign in</a>
+              <a href="/signup" class="btn btn-secondary btn-sm">Sign up</a>
             </div>
           </div>
         </div>

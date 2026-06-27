@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Automation Store</title>
+  <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="/css/auth/general.css" />
+</head>
+
+<body>
+  <header-component></header-component>
+
+  <div class="container d-flex justify-content-center py-5">
+    <form class="w-100 needs-validation">
+      <message-box-component></message-box-component>
+      <div class="mb-3">
+        <label for="inputEmail" class="form-label">Email address</label>
+        <input type="email" class="form-control" id="inputEmail" name="email" required pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$">
+        <div class="invalid-feedback">Please enter a valid email address.</div>
+      </div>
+      <div class="mb-3">
+        <label for="inputUsername" class="form-label">Username</label>
+        <input type="text" class="form-control" id="inputUsername" name="username" required>
+        <div class="invalid-feedback">Please choose a username.</div>
+      </div>
+      <div class="mb-3">
+        <label for="inputPassword" class="form-label">Password</label>
+        <input type="password" class="form-control" id="inputPassword" name="password" required minlength="8">
+        <div class="invalid-feedback">Please enter a password with at least 8 characters.</div>
+      </div>
+      <div class="mb-3">
+        <label for="inputRepeatPassword" class="form-label">Repeat password</label>
+        <input type="password" class="form-control" id="inputRepeatPassword" name="repeatPassword" required>
+        <div class="invalid-feedback">Please confirm your password.</div>
+      </div>
+      <button type="button" class="btn btn-primary w-40">Sign up</button>
+    </form>
+  </div>
+
+  <script src="/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script type="module" src="/components/header.component.js"></script>
+  <script type="module" src="/components/messageBox.component.js"></script>
+  <script type="module" src="/js/auth/signup.js"></script>
+</body>
+
+</html>

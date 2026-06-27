@@ -2,8 +2,6 @@ import { Router } from "express";
 
 const router = Router();
 
-router.get("/", (_req, res) => {
-  res.send("Welcome a Automation Store");
-});
+router.get("/", (_req, res) => {});
 
 export default router;
