@@ -5,10 +5,27 @@ class HeaderComponent extends HTMLElement {
 
   connectedCallback() {
     this.render();
-    
   }
 
   render() {
+    const token = localStorage.getItem('token');
+    const currentPath = window.location.pathname;
+    
+    let authButtons = '';
+    
+    // If logged in, don't show auth buttons
+    if (!token) {
+      // If not on signin page, show signin button
+      if (!currentPath.includes('/signin')) {
+        authButtons += '<a href="/signin" class="btn btn-dark btn-sm border border-secondary me-2">Sign in</a>';
+      }
+      
+      // If not on signup page, show signup button
+      if (!currentPath.includes('/signup')) {
+        authButtons += '<a href="/signup" class="btn btn-secondary btn-sm">Sign up</a>';
+      }
+    }
+
     this.innerHTML = /*html*/`
       <style>
         .header-background {
@@ -23,8 +40,7 @@ class HeaderComponent extends HTMLElement {
             </h2>
 
             <div>
-              <a href="/signin" class="btn btn-dark btn-sm border border-secondary me-2">Sign in</a>
-              <a href="/signup" class="btn btn-secondary btn-sm">Sign up</a>
+              ${authButtons}
             </div>
           </div>
         </div>
