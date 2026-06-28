@@ -5,3 +5,12 @@ form {
   max-width: 420px;
   border: 1px solid lightgray;
 }
+
+form h2 {
+  background-color: #232f3e;
+  text-align: center;
+  color: white;
+  padding: 10px 0px 10px 0px;
+  margin-bottom: 10px;
+  border-radius: 0.1em;
+}
